@@ -1,0 +1,29 @@
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-button {
+    font-weight: bold;
+    background-color: orange;
+    border: 3px solid #222;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.App-button:hover {
+    color: orange;
+    background-color: #222;
+    border: 3px solid orange;
+    cursor: pointer;
+}
