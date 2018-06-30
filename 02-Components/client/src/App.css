@@ -1,0 +1,45 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+img {
+    height: 100%;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.App-container {
+    width: 800px;
+    padding: 10px;
+    margin: auto;
+}
+
+.App-container section {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    border-radius: 10px;
+    height: 240px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#slider {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Slider-button,
+.Character-image {
+    cursor: pointer;
+}
+
+.Details-info {
+    padding: 0 20px;
+    margin: auto auto;
+}
