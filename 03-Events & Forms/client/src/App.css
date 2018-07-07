@@ -1,0 +1,27 @@
+.App {
+    text-align: center;
+}
+
+.form-container {
+    width: 60%;
+    margin: auto;
+}
+
+.error {
+    color: tomato;
+}
+
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon {
+    border: 2px solid goldenrod;
+    padding: 20px;
+    margin: 20px;
+}
+.pokemon img {
+    height: 200px;
+}
