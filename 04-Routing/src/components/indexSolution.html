@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SeenIt</title>
+    <link rel="stylesheet" href="style/site.css">
+    <link rel="stylesheet" href="style/post.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/notifications.css">
+    <link rel="stylesheet" href="style/comment.css">
+    <link rel="stylesheet" href="style/submit.css">
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/models/requester.js"></script>
+    <script src="scripts/models/auth.js"></script>
+    <script src="scripts/models/postsService.js"></script>
+    <script src="scripts/models/commentsService.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <header>
+            <span class="logo">&#9731;</span>
+            <span class="header">SeenIt</span>
+            <div id="profile">
+                <span id="username">Hello, {username}!</span>|
+                <a href="#" id="linkMenuLogout">logout</a>
+            </div>
+        </header>
+
+        <main class="content">
+
+            <section id="viewPostEdit">
+                <div class="submitArea">
+                    <h1>Edit Post</h1>
+                    <p>Please, fill out the form. A thumbnail image/description is not required.</p>
+                    <form id="editPostForm" class="submitForm">
+                        <label>Link URL:</label>
+                        <input name="url" type="text" value="https://www.cnbc.com/2017/06/28/progress-buys-mobile-backend-start-up-kinvey-for-49-million.html">
+                        <label>Link Title:</label>
+                        <input name="title" type="text" value="Progress Software buys Kinvey">
+                        <label>Link Thumbnail Image (optional):</label>
+                        <input name="image" type="text" value="https://pbs.twimg.com/profile_images/464099715865276417/nXvsGPVO.png">
+                        <label>Comment (optional):</label>
+                        <textarea name="description">No desc</textarea>
+                        <input type="submit" value="Edit Post">
+                    </form>
+                </div>
+            </section>
+
+            <section id="viewMyPosts">
+                <div id="myForumPosts" class="posts">
+                    <article class="post">
+                        <div class="col rank">
+                            <span>1</span>
+                        </div>
+                        <div class="col thumbnail">
+                            <a href="https://softuni.bg/">
+                                <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAMDAAAAJGY2Mjg3Y2I4LWU1ZTktNDJlNC1iM2M4LTc2MDlhNmVhNThhNQ.png">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="title">
+                                <a href="https://softuni.bg/">
+                                    SoftUni
+                                </a>
+                            </div>
+                            <div class="details">
+                                <div class="info">
+                                    submitted 1 day ago by Kiril
+                                </div>
+                                <div class="controls">
+                                    <ul>
+                                        <li class="action">
+                                            <a href="#">Details</a>
+                                        </li>
+                                        <li class="action">
+                                            <a href="#">Edit</a>
+                                        </li>
+                                        <li class="action">
+                                            <a href="#">Delete</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                    <!-- TODO: more posts will come here -->
+                </div>
+            </section>
+
+            <section id="viewPostDetails">
+
+                <!-- POST DETAILS DESCRIPTION & IMAGE & TITLE-->
+                <article id="postDetails" class="post">
+                    <div class="col thumbnail">
+                        <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAMDAAAAJGY2Mjg3Y2I4LWU1ZTktNDJlNC1iM2M4LTc2MDlhNmVhNThhNQ.png">
+                    </div>
+                    <div class="post-content">
+                        <div class="title">
+                            <strong>SoftUni</strong>
+                        </div>
+                        <div class="details">
+                            SoftUni is a very cool place
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Create comment form-->
+                <div class="submitArea">
+                    <h1>Post Comment</h1>
+                    <form id="createCommentForm" class="submitForm">
+                        <label>Content:</label>
+                        <input id="cmtContent" name="content" type="text">
+                        <input type="submit" value="Post Comment">
+                    </form>
+                </div>
+
+                <!-- TODO: Comments come here-->
+                <div id="allComments" class="comments">
+                    <article class="comment">
+                        <div class="comment-content">
+                            Comment 1
+                        </div>
+                        <a href="#" class="action">[Delete]</a>
+                    </article>
+                    <article class="comment">
+                        <div class="comment-content">
+                            Comment 2
+                        </div>
+                        <a href="#" class="action">[Delete]</a>
+                    </article>
+
+                    <article class="comment">
+                        <div class="comment-content">
+                            Comment 3
+                        </div>
+                        <a href="#" class="action">[Delete]</a>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
